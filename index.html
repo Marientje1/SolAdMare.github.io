@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sol ad Mare</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -32,40 +34,21 @@
   <div id="map" style="height: 400px; width: 100%;"></div>
 
   <script>
-    function initMap() {
-      // Zandvoort coördinaten
-      const myLatlng = { lat: 52.3745, lng: 4.5335 };
-      const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 13,
-        center: myLatlng,
-      });
+    // Zandvoort coördinaten (decimale notatie)
+    var myLatlng = [52.392639, 4.590583];
+    var map = L.map('map').setView(myLatlng, 13);
 
-      // Marker
-      const marker = new google.maps.Marker({
-        position: myLatlng,
-        map,
-        title: "Sol ad Mare",
-      });
+    // OpenStreetMap tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
 
-      // Info window
-      const infowindow = new google.maps.InfoWindow({
-        content: "<b>Sol ad Mare Vakantiepark</b>",
-      });
-
-      // Toon info window standaard
-      infowindow.open(map, marker);
-
-      // Info window openen bij klikken op marker
-      marker.addListener("click", () => {
-        infowindow.open(map, marker);
-      });
-    }
-    window.initMap = initMap;
+    // Marker en popup
+    L.marker(myLatlng).addTo(map)
+      .bindPopup('<b>Sol ad Mare Vakantiepark</b>')
+      .openPopup();
   </script>
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=INSERT_YOUR_API_KEY&callback=initMap&v=weekly"
-    defer
-  ></script>
 
   <div class="chat-icon">
     <span>💬</span>
