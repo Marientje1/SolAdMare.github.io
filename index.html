@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Villa Aphrodite</title>
+  <title>Sol ad Mare</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -12,19 +12,19 @@
       <ul>
         <li><a class="active" href="#">Home</a></li>
         <li><a href="#">Sol ad Mare</a></li>
-        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
     </nav>
-    <h1>Villa Aphrodite</h1>
-    <p class="subtitle">Waterfront Vacation Rental</p>
+    <h1>Sol ad Mare</h1>
+    <p class="subtitle">Vakantiepark aan zee bij Zandvoort</p>
   </header>
 
   <section class="hero">
-    <img src="./images/" alt="Villa View" class="background-img" />
+    <img src="./images/vakantiepark.jpg" alt="Uitzicht op Sol ad Mare" class="background-img" />
     <div class="text-box">
-      <h2>Y<br></h2>
+      <h2>Welkom bij Sol ad Mare</h2>
       <p>
-        
+        Geniet van een ontspannen vakantie aan de kust, vlakbij het strand van Zandvoort. Boek nu jouw verblijf!
       </p>
     </div>
   </section>
@@ -33,8 +33,8 @@
 
   <script>
     function initMap() {
-      // Mykonos coordinates
-      const myLatlng = { lat: 37.4467, lng: 25.3289 };
+      // Zandvoort coördinaten
+      const myLatlng = { lat: 52.3745, lng: 4.5335 };
       const map = new google.maps.Map(document.getElementById("map"), {
         zoom: 13,
         center: myLatlng,
@@ -44,18 +44,18 @@
       const marker = new google.maps.Marker({
         position: myLatlng,
         map,
-        title: "Villa Aphrodite",
+        title: "Sol ad Mare",
       });
 
       // Info window
       const infowindow = new google.maps.InfoWindow({
-        content: "<b>Villa Aphrodite</b>",
+        content: "<b>Sol ad Mare Vakantiepark</b>",
       });
 
-      // Show info window by default
+      // Toon info window standaard
       infowindow.open(map, marker);
 
-      // Optional: open info window on marker click
+      // Info window openen bij klikken op marker
       marker.addListener("click", () => {
         infowindow.open(map, marker);
       });
