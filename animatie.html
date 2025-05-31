@@ -1,30 +1,70 @@
-<!DOCTYPE html>
-<html lang="nl">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Animatie - Sol ad Mare</title>
+/* styles.css */
+body {lang="nl">
+    font-family: Arial, sans-serif;
+    margin: 0;t="UTF-8" />
+    padding: 0;iewport" content="width=device-width, initial-scale=1.0"/>
+} <title>Animatie - Sol ad Mare</title>
   <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
+header {
+    background-color:rgb(55, 166, 218);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}       <li><a href="index.html">Home</a></li>
         <li><a href="restaurant.html">Restaurant</a></li>
-        <li><a class="active" href="animatie.html">Animatie</a></li>
-        <li><a href="omgeving.html">Omgeving</a></li>
-        <li><a href="prijzen.html">Prijzen</a></li>
-        <li><a href="contact.html">Contact</a></li>
+nav ul {<li><a class="active" href="animatie.html">Animatie</a></li>
+    list-style-type: none;ing.html">Omgeving</a></li>
+    padding: 0;href="prijzen.html">Prijzen</a></li>
+}       <li><a href="contact.html">Contact</a></li>
       </ul>
-    </nav>
-    <h1>Animatie</h1>
-  </header>
-
+nav ul li {
+    display: inline;>
+    margin: 0 15px;
+}
   <section>
-    <p>
-      Voor jong en oud is er altijd iets te doen! Doe mee met onze sportactiviteiten zoals voetbal en volleybal, of geniet van onze georganiseerde avondshows en kinderactiviteiten.
-    </p>
-  </section>
+nav ul li a {
+    color: white;n oud is er altijd iets te doen! Doe mee met onze sportactiviteiten zoals voetbal en volleybal, of geniet van onze georganiseerde avondshows en kinderactiviteiten.
+    text-decoration: none;
+} </section>
 </body>
-</html>
+nav ul li a.active {    font-weight: bold;}.hero {    position: relative;    text-align: center;    color: white;}.background-img {    width: 100%;    height: auto;}.text-box {    position: absolute;    top: 50%;    left: 50%;    transform: translate(-50%, -50%);    background-color: rgba(0, 0, 0, 0.5);    padding: 20px;}.layout {    margin: 20px auto;    border: 1px solid #ccc;    border-radius: 8px;    overflow: hidden;}#map {    height: 400px;    width: 100%;}.chat-icon {    position: fixed;    bottom: 20px;    right: 20px;    font-size: 24px;    cursor: pointer;}
+
+.blue-section {
+  background-color: #d6e4f0; /* Lichtblauwe achtergrond */
+  padding: 2rem;
+  text-align: left;
+  position: relative;
+}
+
+.blue-section h2 {
+  color: #2c3e50; /* Donkerblauwe tekstkleur */
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.blue-section p {
+  color: #2c3e50;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.blue-section img {
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  max-width: 200px;
+  border-radius: 8px;
+}
+
+<section class="blue-section">
+  <h2>Animatie voor jong en oud</h2>
+  <p>
+    Doe mee met onze sportactiviteiten zoals voetbal en volleybal, of geniet van onze georganiseerde avondshows en kinderactiviteiten. 
+    Er is altijd iets te doen voor iedereen!
+  </p>
+  <img src="images/animatie.jpg" alt="Animatie activiteiten" />
+</section>
+
+<footer>
+  <p>&copy; 2025 Sol ad Mare. Alle rechten voorbehouden.</p>
+</footer>
